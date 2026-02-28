@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uji Lampu Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Lampu Interaktif</h1>
+<hr>
+
+<h3>Rangkaian Pertama</h3>
+<img id="lampu1" src="off.gif" width="100">
+<img id="lampu2" src="off.gif" width="100">
+<img id="lampu3" src="off.gif" width="100">
+
+<p>Tombol Satu-satu:</p>
+<button onclick="klikLampu1()">Lampu 1</button>
+<button onclick="klikLampu2()">Lampu 2</button>
+<button onclick="klikLampu3()">Lampu 3</button> 
+
+<p>Tombol Sekaligus:</p>
+<button onclick="NyalaSemuaSoal1()">Hidupkan Semua</button>
+<button onclick="MatiSemuaSoal1()">Matikan Semua</button>
+
+<br><br><hr>
+
+<h3>Rangkaian Kedua</h3>
+<img id="lampuA" src="off.gif" width="100">
+<img id="lampuB" src="off.gif" width="100">
+<img id="lampuC" src="off.gif" width="100">
+<img id="lampuD" src="off.gif" width="100">
+
+<p>Kontrol Manual:</p>
+<button onclick="pencetA()">Lampu A</button>
+<button onclick="pencetB()">Lampu B</button>
+<button onclick="pencetC()">Lampu C</button>
+<button onclick="pencetD()">Lampu D</button>
+
+<p>Kontrol Sekaligus:</p>
+<button onclick="SemuaHidup()">Hidupkan Semua</button>
+<button onclick="SemuaMati()">Matikan Semua</button>
+
+<p>Kontrol Kelompok:</p>
+<button onclick="pencetlampuAB()">Lampu (A, B)</button>
+<button onclick="pencetlampuCD()">Lampu (C, D)</button>
+
+<script>
+
+function klikLampu1() {
+let lampu1 = document.getElementById('lampu1')
+if (lampu1.src.includes("off.gif")) {
+lampu1.src = "on.gif"
+} else {
+lampu1.src = "off.gif"
+}
+}
+
+  function klikLampu2() {
+    let lampu2 = document.getElementById('lampu2');
+    if(lampu2.src.includes('off.gif')){
+    lampu2.src = 'on.gif';
+    }else{
+    lampu2.src = 'off.gif';
+    }
+  }
+
+function klikLampu3() {
+let lampu3 = document.getElementById('lampu3');
+if (lampu3.src.includes('off.gif')) {
+lampu3.src = 'on.gif';
+} else {
+lampu3.src = 'off.gif';
+}
+}
+
+function NyalaSemuaSoal1() {
+document.getElementById('lampu1').src = 'on.gif';
+document.getElementById('lampu2').src = 'on.gif';
+document.getElementById('lampu3').src = 'on.gif';
+}
+
+function MatiSemuaSoal1() {
+document.getElementById('lampu1').src = 'off.gif';
+document.getElementById('lampu2').src = 'off.gif';
+document.getElementById('lampu3').src = 'off.gif';
+}
+
+function pencetA() {
+let lA = document.getElementById('lampuA');
+if (lA.src.includes("off.gif")) { lA.src = "on.gif"; } else { lA.src = "off.gif"; }
+}
+
+function pencetB() {
+let lB = document.getElementById('lampuB');
+if (lB.src.includes("off.gif")) { lB.src = "on.gif"; } else { lB.src = "off.gif"; }
+}
+
+function pencetC() {
+let lC = document.getElementById('lampuC');
+if (lC.src.includes("off.gif")) { lC.src = "on.gif"; } else { lC.src = "off.gif"; }
+}
+
+function pencetD() {
+let lD = document.getElementById('lampuD');
+if (lD.src.includes("off.gif")) { lD.src = "on.gif"; } else { lD.src = "off.gif"; }
+}
+
+function SemuaHidup() {
+document.getElementById('lampuA').src = 'on.gif';
+document.getElementById('lampuB').src = 'on.gif';
+document.getElementById('lampuC').src = 'on.gif';
+document.getElementById('lampuD').src = 'on.gif';
+}
+
+function SemuaMati() {
+document.getElementById('lampuA').src = 'off.gif';
+document.getElementById('lampuB').src = 'off.gif';
+document.getElementById('lampuC').src = 'off.gif';
+document.getElementById('lampuD').src = 'off.gif';
+}
+
+function pencetlampuAB() {
+let a = document.getElementById('lampuA');
+let b = document.getElementById('lampuB');
+
+if (a.src.includes('off.gif')) {
+a.src = 'on.gif';
+b.src = 'on.gif';
+} else {
+a.src = 'off.gif';
+b.src = 'off.gif';
+}
+}
+
+function pencetlampuCD() {
+let c = document.getElementById('lampuC');
+let d = document.getElementById('lampuD');
+if (c.src.includes('off.gif')) {
+c.src = 'on.gif';
+d.src = 'on.gif';
+} else {
+c.src = 'off.gif';
+d.src = 'off.gif';
+}
+}
+</script>    
+</body>
+</html>
